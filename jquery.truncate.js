@@ -70,7 +70,6 @@
     var fontCSS;
     var $element;
     var $truncateWorker;
-    var elementText = $element.text();
     
     if (options.assumeSameStyle) {
         $element = $(this[0]);
@@ -93,6 +92,7 @@
 
     return this.each(function () {
       $element = $(this);
+      var elementText = $element.text();
       if (!options.assumeSameStyle) {
         fontCSS = {
 	        'fontFamily': $element.css('fontFamily'),
